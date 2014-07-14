@@ -1,8 +1,8 @@
 Bundle-Version: 0.1.0
 Private-Package: org.greenscape.web.common.filter
--buildpath: javax.servlet,\
+-buildpath:  \
+	javax.servlet,\
 	org.eclipse.osgi.services,\
-	org.greenscape.core;version=latest,\
-	org.greenscape.organization;version=latest
+	org.greenscape.core;version=latest
 -dsannotations: *
 Export-Package: org.greenscape.web.common

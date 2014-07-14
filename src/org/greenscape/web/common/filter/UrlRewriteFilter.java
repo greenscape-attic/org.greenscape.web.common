@@ -12,9 +12,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.greenscape.core.model.Organization;
+import org.greenscape.core.model.OrganizationModel;
 import org.greenscape.core.service.Service;
-import org.greenscape.organization.OrganizationEntity;
-import org.greenscape.organization.OrganizationModel;
 import org.greenscape.web.common.CommonConstants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -41,12 +41,12 @@ public class UrlRewriteFilter implements Filter {
 			if (organizationId == null) {
 				// check if there is only 1 organization. in that case set it to
 				// that
-				List<OrganizationEntity> organizationEntities = service.find(OrganizationEntity.class);
+				List<Organization> organizationEntities = service.find(Organization.class);
 				if (organizationEntities != null && organizationEntities.size() == 1) {
 					request.setAttribute(CommonConstants.ORGANIZATION, organizationEntities.get(0));
 				}
 			} else if (organizationId != null && !organizationId.isEmpty()) {
-				OrganizationEntity organizationEntity = service.find(OrganizationEntity.class, organizationId);
+				Organization organizationEntity = service.find(Organization.class, organizationId);
 				if (organizationEntity != null) {
 					request.getParameterMap().remove(CommonConstants.ORGANIZATION);
 					request.setAttribute(CommonConstants.ORGANIZATION, organizationEntity);
