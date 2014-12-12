@@ -16,10 +16,9 @@ import org.greenscape.core.model.Organization;
 import org.greenscape.core.model.OrganizationModel;
 import org.greenscape.core.service.Service;
 import org.greenscape.web.common.CommonConstants;
-import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component(property = { "pattern=/.*", "service.ranking=1" })
+//@Component(property = { "pattern=/.*", "service.ranking=2" })
 public class UrlRewriteFilter implements Filter {
 
 	private Service service;
