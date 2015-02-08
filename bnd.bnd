@@ -5,10 +5,10 @@ Private-Package:  \
 	javax.servlet,\
 	org.eclipse.osgi.services,\
 	org.greenscape.core;version=latest,\
-	osgi.core;version=4.3,\
+	osgi.core;version=5.0,\
 	org.apache.shiro.core,\
 	org.apache.shiro.web
 -dsannotations: *
 Export-Package: org.greenscape.web.common
-javac.source: 1.7
-javac.target: 1.7
+javac.source: 1.8
+javac.target: 1.8
