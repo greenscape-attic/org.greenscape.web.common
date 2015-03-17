@@ -7,7 +7,8 @@ Private-Package:  \
 	org.greenscape.core;version=latest,\
 	osgi.core;version=5.0,\
 	org.apache.shiro.core,\
-	org.apache.shiro.web
+	org.apache.shiro.web,\
+	org.greenscape.persistence;version=latest
 -dsannotations: *
 Export-Package: org.greenscape.web.common
 javac.source: 1.8
